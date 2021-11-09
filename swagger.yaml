@@ -1,0 +1,420 @@
+swagger: '2.0'
+info:
+  title: Snippets API
+  description: Test description
+  termsOfService: https://www.google.com/policies/terms/
+  contact:
+    email: contact@snippets.local
+  license:
+    name: BSD License
+  version: v1
+host: playlist-builder-308809.appspot.com
+schemes:
+  - http
+basePath: /api
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /channels:
+    get:
+      operationId: channels_list
+      description: ''
+      parameters:
+        - name: page
+          in: query
+          description: A page number within the paginated result set.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            required:
+              - count
+              - results
+            type: object
+            properties:
+              count:
+                type: integer
+              next:
+                type: string
+                format: uri
+                x-nullable: true
+              previous:
+                type: string
+                format: uri
+                x-nullable: true
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/Channel'
+      tags:
+        - channels
+    parameters: []
+  /channels/{channel_id}:
+    get:
+      operationId: channels_read
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Channel'
+      tags:
+        - channels
+    parameters:
+      - name: channel_id
+        in: path
+        description: A unique value identifying this channel.
+        required: true
+        type: string
+  /follows:
+    get:
+      operationId: follows_list
+      description: ''
+      parameters:
+        - name: page
+          in: query
+          description: A page number within the paginated result set.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            required:
+              - count
+              - results
+            type: object
+            properties:
+              count:
+                type: integer
+              next:
+                type: string
+                format: uri
+                x-nullable: true
+              previous:
+                type: string
+                format: uri
+                x-nullable: true
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/Follow'
+      tags:
+        - follows
+    parameters: []
+  /groups:
+    get:
+      operationId: groups_list
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+        - name: page
+          in: query
+          description: A page number within the paginated result set.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            required:
+              - count
+              - results
+            type: object
+            properties:
+              count:
+                type: integer
+              next:
+                type: string
+                format: uri
+                x-nullable: true
+              previous:
+                type: string
+                format: uri
+                x-nullable: true
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/Group'
+      tags:
+        - groups
+    post:
+      operationId: groups_create
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Group'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/Group'
+      tags:
+        - groups
+    parameters: []
+  /groups/{id}:
+    get:
+      operationId: groups_read
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Group'
+      tags:
+        - groups
+    put:
+      operationId: groups_update
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Group'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Group'
+      tags:
+        - groups
+    patch:
+      operationId: groups_partial_update
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/Group'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/Group'
+      tags:
+        - groups
+    delete:
+      operationId: groups_delete
+      description: API endpoint that allows groups to be viewed or edited.
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - groups
+    parameters:
+      - name: id
+        in: path
+        description: A unique integer value identifying this group.
+        required: true
+        type: integer
+  /users:
+    get:
+      operationId: users_list
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+        - name: page
+          in: query
+          description: A page number within the paginated result set.
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: ''
+          schema:
+            required:
+              - count
+              - results
+            type: object
+            properties:
+              count:
+                type: integer
+              next:
+                type: string
+                format: uri
+                x-nullable: true
+              previous:
+                type: string
+                format: uri
+                x-nullable: true
+              results:
+                type: array
+                items:
+                  $ref: '#/definitions/User'
+      tags:
+        - users
+    post:
+      operationId: users_create
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '201':
+          description: ''
+          schema:
+            $ref: '#/definitions/User'
+      tags:
+        - users
+    parameters: []
+  /users/{id}:
+    get:
+      operationId: users_read
+      description: API endpoint that allows users to be viewed or edited.
+      parameters: []
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/User'
+      tags:
+        - users
+    put:
+      operationId: users_update
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/User'
+      tags:
+        - users
+    patch:
+      operationId: users_partial_update
+      description: API endpoint that allows users to be viewed or edited.
+      parameters:
+        - name: data
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: ''
+          schema:
+            $ref: '#/definitions/User'
+      tags:
+        - users
+    delete:
+      operationId: users_delete
+      description: API endpoint that allows users to be viewed or edited.
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+        - users
+    parameters:
+      - name: id
+        in: path
+        description: A unique integer value identifying this user.
+        required: true
+        type: integer
+definitions:
+  Channel:
+    required:
+      - channel_id
+    type: object
+    properties:
+      title:
+        title: Title
+        type: string
+        maxLength: 100
+        minLength: 1
+        x-nullable: true
+      description:
+        title: Description
+        type: string
+        maxLength: 3000
+        x-nullable: true
+      channel_id:
+        title: Channel id
+        type: string
+        maxLength: 50
+        minLength: 1
+  Follow:
+    required:
+      - user
+      - channel
+    type: object
+    properties:
+      user:
+        title: User
+        type: string
+        format: uri
+      channel:
+        title: Channel
+        type: string
+        format: uri
+      score:
+        title: Score
+        type: integer
+        maximum: 2147483647
+        minimum: -2147483648
+  Group:
+    required:
+      - name
+    type: object
+    properties:
+      url:
+        title: Url
+        type: string
+        format: uri
+        readOnly: true
+      name:
+        title: Name
+        type: string
+        maxLength: 150
+        minLength: 1
+  User:
+    required:
+      - username
+    type: object
+    properties:
+      url:
+        title: Url
+        type: string
+        format: uri
+        readOnly: true
+      username:
+        title: Username
+        description: Required. 150 characters or fewer. Letters, digits and @/./+/-/_
+          only.
+        type: string
+        pattern: ^[\w.@+-]+$
+        maxLength: 150
+        minLength: 1
+      email:
+        title: Email address
+        type: string
+        format: email
+        maxLength: 254
+      groups:
+        description: The groups this user belongs to. A user will get all permissions
+          granted to each of their groups.
+        type: array
+        items:
+          description: The groups this user belongs to. A user will get all permissions
+            granted to each of their groups.
+          type: string
+          format: uri
+        uniqueItems: true
