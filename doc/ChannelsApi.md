@@ -22,13 +22,13 @@ Method | HTTP request | Description
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getChannelsApi();
-final int page = 56; // int | A page number within the paginated result set.
+final api_instance = ChannelsApi();
+final page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.channelsList(page);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.channelsList(page);
+    print(result);
+} catch (e) {
     print('Exception when calling ChannelsApi->channelsList: $e\n');
 }
 ```
@@ -63,13 +63,13 @@ No authorization required
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getChannelsApi();
-final String channelId = channelId_example; // String | A unique value identifying this channel.
+final api_instance = ChannelsApi();
+final channelId = channelId_example; // String | A unique value identifying this channel.
 
 try {
-    final response = api.channelsRead(channelId);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.channelsRead(channelId);
+    print(result);
+} catch (e) {
     print('Exception when calling ChannelsApi->channelsRead: $e\n');
 }
 ```

@@ -28,13 +28,13 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getGroupsApi();
-final Group data = ; // Group | 
+final api_instance = GroupsApi();
+final data = Group(); // Group | 
 
 try {
-    final response = api.groupsCreate(data);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.groupsCreate(data);
+    print(result);
+} catch (e) {
     print('Exception when calling GroupsApi->groupsCreate: $e\n');
 }
 ```
@@ -71,12 +71,12 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getGroupsApi();
-final int id = 56; // int | A unique integer value identifying this group.
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
 
 try {
-    api.groupsDelete(id);
-} catch on DioError (e) {
+    api_instance.groupsDelete(id);
+} catch (e) {
     print('Exception when calling GroupsApi->groupsDelete: $e\n');
 }
 ```
@@ -113,13 +113,13 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getGroupsApi();
-final int page = 56; // int | A page number within the paginated result set.
+final api_instance = GroupsApi();
+final page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.groupsList(page);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.groupsList(page);
+    print(result);
+} catch (e) {
     print('Exception when calling GroupsApi->groupsList: $e\n');
 }
 ```
@@ -156,14 +156,14 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getGroupsApi();
-final int id = 56; // int | A unique integer value identifying this group.
-final Group data = ; // Group | 
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
+final data = Group(); // Group | 
 
 try {
-    final response = api.groupsPartialUpdate(id, data);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.groupsPartialUpdate(id, data);
+    print(result);
+} catch (e) {
     print('Exception when calling GroupsApi->groupsPartialUpdate: $e\n');
 }
 ```
@@ -201,13 +201,13 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getGroupsApi();
-final int id = 56; // int | A unique integer value identifying this group.
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
 
 try {
-    final response = api.groupsRead(id);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.groupsRead(id);
+    print(result);
+} catch (e) {
     print('Exception when calling GroupsApi->groupsRead: $e\n');
 }
 ```
@@ -244,14 +244,14 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getGroupsApi();
-final int id = 56; // int | A unique integer value identifying this group.
-final Group data = ; // Group | 
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
+final data = Group(); // Group | 
 
 try {
-    final response = api.groupsUpdate(id, data);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.groupsUpdate(id, data);
+    print(result);
+} catch (e) {
     print('Exception when calling GroupsApi->groupsUpdate: $e\n');
 }
 ```

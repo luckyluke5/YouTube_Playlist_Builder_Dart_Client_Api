@@ -28,13 +28,13 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getUsersApi();
-final User data = ; // User | 
+final api_instance = UsersApi();
+final data = User(); // User | 
 
 try {
-    final response = api.usersCreate(data);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.usersCreate(data);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->usersCreate: $e\n');
 }
 ```
@@ -71,12 +71,12 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getUsersApi();
-final int id = 56; // int | A unique integer value identifying this user.
+final api_instance = UsersApi();
+final id = 56; // int | A unique integer value identifying this user.
 
 try {
-    api.usersDelete(id);
-} catch on DioError (e) {
+    api_instance.usersDelete(id);
+} catch (e) {
     print('Exception when calling UsersApi->usersDelete: $e\n');
 }
 ```
@@ -113,13 +113,13 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getUsersApi();
-final int page = 56; // int | A page number within the paginated result set.
+final api_instance = UsersApi();
+final page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.usersList(page);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.usersList(page);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->usersList: $e\n');
 }
 ```
@@ -156,14 +156,14 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getUsersApi();
-final int id = 56; // int | A unique integer value identifying this user.
-final User data = ; // User | 
+final api_instance = UsersApi();
+final id = 56; // int | A unique integer value identifying this user.
+final data = User(); // User | 
 
 try {
-    final response = api.usersPartialUpdate(id, data);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.usersPartialUpdate(id, data);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->usersPartialUpdate: $e\n');
 }
 ```
@@ -201,13 +201,13 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getUsersApi();
-final int id = 56; // int | A unique integer value identifying this user.
+final api_instance = UsersApi();
+final id = 56; // int | A unique integer value identifying this user.
 
 try {
-    final response = api.usersRead(id);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.usersRead(id);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->usersRead: $e\n');
 }
 ```
@@ -244,14 +244,14 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getUsersApi();
-final int id = 56; // int | A unique integer value identifying this user.
-final User data = ; // User | 
+final api_instance = UsersApi();
+final id = 56; // int | A unique integer value identifying this user.
+final data = User(); // User | 
 
 try {
-    final response = api.usersUpdate(id, data);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.usersUpdate(id, data);
+    print(result);
+} catch (e) {
     print('Exception when calling UsersApi->usersUpdate: $e\n');
 }
 ```

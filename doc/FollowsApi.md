@@ -21,13 +21,13 @@ Method | HTTP request | Description
 ```dart
 import 'package:my_api/api.dart';
 
-final api = MyApi().getFollowsApi();
-final int page = 56; // int | A page number within the paginated result set.
+final api_instance = FollowsApi();
+final page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.followsList(page);
-    print(response);
-} catch on DioError (e) {
+    final result = api_instance.followsList(page);
+    print(result);
+} catch (e) {
     print('Exception when calling FollowsApi->followsList: $e\n');
 }
 ```
