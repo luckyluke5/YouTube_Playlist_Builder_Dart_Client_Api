@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-
+// @dart=2.0
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class GroupsApi {
-  GroupsApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  GroupsApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -60,7 +60,7 @@ class GroupsApi {
   /// Parameters:
   ///
   /// * [Group] data (required):
-  Future<Group?> groupsCreate(Group data,) async {
+  Future<Group> groupsCreate(Group data,) async {
     final response = await groupsCreateWithHttpInfo(data,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -69,7 +69,7 @@ class GroupsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group;
     
     }
     return Future<Group>.value();
@@ -94,7 +94,7 @@ class GroupsApi {
       .replaceAll('{id}', id.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -137,14 +137,14 @@ class GroupsApi {
   ///
   /// * [int] page:
   ///   A page number within the paginated result set.
-  Future<Response> groupsListWithHttpInfo({ int? page, }) async {
+  Future<Response> groupsListWithHttpInfo({ int page, }) async {
     // Verify required params are set.
 
     // ignore: prefer_const_declarations
     final path = r'/groups';
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -176,7 +176,7 @@ class GroupsApi {
   ///
   /// * [int] page:
   ///   A page number within the paginated result set.
-  Future<InlineResponse2002?> groupsList({ int? page, }) async {
+  Future<InlineResponse2002> groupsList({ int page, }) async {
     final response = await groupsListWithHttpInfo( page: page, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -185,7 +185,7 @@ class GroupsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InlineResponse2002',) as InlineResponse2002?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InlineResponse2002',) as InlineResponse2002;
     
     }
     return Future<InlineResponse2002>.value();
@@ -245,7 +245,7 @@ class GroupsApi {
   ///   A unique integer value identifying this group.
   ///
   /// * [Group] data (required):
-  Future<Group?> groupsPartialUpdate(int id, Group data,) async {
+  Future<Group> groupsPartialUpdate(int id, Group data,) async {
     final response = await groupsPartialUpdateWithHttpInfo(id, data,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -254,7 +254,7 @@ class GroupsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group;
     
     }
     return Future<Group>.value();
@@ -279,7 +279,7 @@ class GroupsApi {
       .replaceAll('{id}', id.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -307,7 +307,7 @@ class GroupsApi {
   ///
   /// * [int] id (required):
   ///   A unique integer value identifying this group.
-  Future<Group?> groupsRead(int id,) async {
+  Future<Group> groupsRead(int id,) async {
     final response = await groupsReadWithHttpInfo(id,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -316,7 +316,7 @@ class GroupsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group;
     
     }
     return Future<Group>.value();
@@ -376,7 +376,7 @@ class GroupsApi {
   ///   A unique integer value identifying this group.
   ///
   /// * [Group] data (required):
-  Future<Group?> groupsUpdate(int id, Group data,) async {
+  Future<Group> groupsUpdate(int id, Group data,) async {
     final response = await groupsUpdateWithHttpInfo(id, data,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -385,7 +385,7 @@ class GroupsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Group',) as Group;
     
     }
     return Future<Group>.value();

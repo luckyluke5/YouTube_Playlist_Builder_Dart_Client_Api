@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-
+// @dart=2.0
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -14,12 +14,12 @@ class Group {
   /// Returns a new [Group] instance.
   Group({
     this.url,
-    required this.name,
+    @required this.name,
   });
 
-  String? url;
+  String url;
 
-  String? name;
+  String name;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is Group &&
@@ -47,7 +47,7 @@ class Group {
   /// Returns a new [Group] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static Group? fromJson(dynamic value) {
+  static Group fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return Group(
@@ -58,13 +58,13 @@ class Group {
     return null;
   }
 
-  static List<Group?>? listFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) =>
+  static List<Group> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
     json is List && json.isNotEmpty
       ? json.map(Group.fromJson).toList(growable: true == growable)
       : true == emptyIsNull ? null : <Group>[];
 
-  static Map<String, Group?> mapFromJson(dynamic json) {
-    final map = <String, Group?>{};
+  static Map<String, Group> mapFromJson(dynamic json) {
+    final map = <String, Group>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
@@ -74,8 +74,8 @@ class Group {
   }
 
   // maps a json object with a list of Group-objects as value to a dart map
-  static Map<String, List<Group?>?> mapListFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) {
-    final Map<String, List<Group?>?> map = <String, List<Group>?>{};
+  static Map<String, List<Group>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<Group>>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()

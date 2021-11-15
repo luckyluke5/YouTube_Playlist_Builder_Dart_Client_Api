@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-
+// @dart=2.0
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class UsersApi {
-  UsersApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  UsersApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -60,7 +60,7 @@ class UsersApi {
   /// Parameters:
   ///
   /// * [User] data (required):
-  Future<User?> usersCreate(User data,) async {
+  Future<User> usersCreate(User data,) async {
     final response = await usersCreateWithHttpInfo(data,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -69,7 +69,7 @@ class UsersApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User;
     
     }
     return Future<User>.value();
@@ -94,7 +94,7 @@ class UsersApi {
       .replaceAll('{id}', id.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -137,14 +137,14 @@ class UsersApi {
   ///
   /// * [int] page:
   ///   A page number within the paginated result set.
-  Future<Response> usersListWithHttpInfo({ int? page, }) async {
+  Future<Response> usersListWithHttpInfo({ int page, }) async {
     // Verify required params are set.
 
     // ignore: prefer_const_declarations
     final path = r'/users';
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -176,7 +176,7 @@ class UsersApi {
   ///
   /// * [int] page:
   ///   A page number within the paginated result set.
-  Future<InlineResponse2003?> usersList({ int? page, }) async {
+  Future<InlineResponse2003> usersList({ int page, }) async {
     final response = await usersListWithHttpInfo( page: page, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -185,7 +185,7 @@ class UsersApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InlineResponse2003',) as InlineResponse2003?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InlineResponse2003',) as InlineResponse2003;
     
     }
     return Future<InlineResponse2003>.value();
@@ -245,7 +245,7 @@ class UsersApi {
   ///   A unique integer value identifying this user.
   ///
   /// * [User] data (required):
-  Future<User?> usersPartialUpdate(int id, User data,) async {
+  Future<User> usersPartialUpdate(int id, User data,) async {
     final response = await usersPartialUpdateWithHttpInfo(id, data,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -254,7 +254,7 @@ class UsersApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User;
     
     }
     return Future<User>.value();
@@ -279,7 +279,7 @@ class UsersApi {
       .replaceAll('{id}', id.toString());
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -307,7 +307,7 @@ class UsersApi {
   ///
   /// * [int] id (required):
   ///   A unique integer value identifying this user.
-  Future<User?> usersRead(int id,) async {
+  Future<User> usersRead(int id,) async {
     final response = await usersReadWithHttpInfo(id,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -316,7 +316,7 @@ class UsersApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User;
     
     }
     return Future<User>.value();
@@ -376,7 +376,7 @@ class UsersApi {
   ///   A unique integer value identifying this user.
   ///
   /// * [User] data (required):
-  Future<User?> usersUpdate(int id, User data,) async {
+  Future<User> usersUpdate(int id, User data,) async {
     final response = await usersUpdateWithHttpInfo(id, data,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -385,7 +385,7 @@ class UsersApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'User',) as User;
     
     }
     return Future<User>.value();

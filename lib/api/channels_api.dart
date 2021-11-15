@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-
+// @dart=2.0
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -12,7 +12,7 @@ part of openapi.api;
 
 
 class ChannelsApi {
-  ChannelsApi([ApiClient? apiClient]) : apiClient = apiClient ?? defaultApiClient;
+  ChannelsApi([ApiClient apiClient]) : apiClient = apiClient ?? defaultApiClient;
 
   final ApiClient apiClient;
 
@@ -21,14 +21,14 @@ class ChannelsApi {
   ///
   /// * [int] page:
   ///   A page number within the paginated result set.
-  Future<Response> channelsListWithHttpInfo({ int? page, }) async {
+  Future<Response> channelsListWithHttpInfo({ int page, }) async {
     // Verify required params are set.
 
     // ignore: prefer_const_declarations
     final path = r'/channels';
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -58,7 +58,7 @@ class ChannelsApi {
   ///
   /// * [int] page:
   ///   A page number within the paginated result set.
-  Future<InlineResponse200?> channelsList({ int? page, }) async {
+  Future<InlineResponse200> channelsList({ int page, }) async {
     final response = await channelsListWithHttpInfo( page: page, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -67,7 +67,7 @@ class ChannelsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InlineResponse200',) as InlineResponse200?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'InlineResponse200',) as InlineResponse200;
     
     }
     return Future<InlineResponse200>.value();
@@ -89,7 +89,7 @@ class ChannelsApi {
       .replaceAll('{channel_id}', channelId);
 
     // ignore: prefer_final_locals
-    Object? postBody;
+    Object postBody;
 
     final queryParams = <QueryParam>[];
     final headerParams = <String, String>{};
@@ -115,7 +115,7 @@ class ChannelsApi {
   ///
   /// * [String] channelId (required):
   ///   A unique value identifying this channel.
-  Future<Channel?> channelsRead(String channelId,) async {
+  Future<Channel> channelsRead(String channelId,) async {
     final response = await channelsReadWithHttpInfo(channelId,);
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
@@ -124,7 +124,7 @@ class ChannelsApi {
     // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
     // FormatException when trying to decode an empty string.
     if (response.body != null && response.statusCode != HttpStatus.noContent) {
-      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Channel',) as Channel?;
+      return await apiClient.deserializeAsync(await _decodeBodyBytes(response), 'Channel',) as Channel;
     
     }
     return Future<Channel>.value();

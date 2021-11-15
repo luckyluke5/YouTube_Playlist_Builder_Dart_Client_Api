@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 analysis_options.yaml
@@ -38,15 +37,3 @@ lib/model/inline_response2002.dart
 lib/model/inline_response2003.dart
 lib/model/user.dart
 pubspec.yaml
-test/channel_test.dart
-test/channels_api_test.dart
-test/follow_test.dart
-test/follows_api_test.dart
-test/group_test.dart
-test/groups_api_test.dart
-test/inline_response2001_test.dart
-test/inline_response2002_test.dart
-test/inline_response2003_test.dart
-test/inline_response200_test.dart
-test/user_test.dart
-test/users_api_test.dart

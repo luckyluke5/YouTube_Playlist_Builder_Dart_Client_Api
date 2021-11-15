@@ -1,7 +1,7 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-
+// @dart=2.0
 
 // ignore_for_file: unused_element, unused_import
 // ignore_for_file: always_put_required_named_parameters_first
@@ -13,18 +13,18 @@ part of openapi.api;
 class Follow {
   /// Returns a new [Follow] instance.
   Follow({
-    required this.user,
-    required this.channel,
+    @required this.user,
+    @required this.channel,
     this.score,
   });
 
-  String? user;
+  String user;
 
-  String? channel;
+  String channel;
 
   // minimum: -2147483648
   // maximum: 2147483647
-  int? score;
+  int score;
 
   @override
   bool operator ==(Object other) => identical(this, other) || other is Follow &&
@@ -55,7 +55,7 @@ class Follow {
   /// Returns a new [Follow] instance and imports its values from
   /// [value] if it's a [Map], null otherwise.
   // ignore: prefer_constructors_over_static_methods
-  static Follow? fromJson(dynamic value) {
+  static Follow fromJson(dynamic value) {
     if (value is Map) {
       final json = value.cast<String, dynamic>();
       return Follow(
@@ -67,13 +67,13 @@ class Follow {
     return null;
   }
 
-  static List<Follow?>? listFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) =>
+  static List<Follow> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
     json is List && json.isNotEmpty
       ? json.map(Follow.fromJson).toList(growable: true == growable)
       : true == emptyIsNull ? null : <Follow>[];
 
-  static Map<String, Follow?> mapFromJson(dynamic json) {
-    final map = <String, Follow?>{};
+  static Map<String, Follow> mapFromJson(dynamic json) {
+    final map = <String, Follow>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
@@ -83,8 +83,8 @@ class Follow {
   }
 
   // maps a json object with a list of Follow-objects as value to a dart map
-  static Map<String, List<Follow?>?> mapListFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) {
-    final Map<String, List<Follow?>?> map = <String, List<Follow>?>{};
+  static Map<String, List<Follow>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
+    final map = <String, List<Follow>>{};
     if (json is Map && json.isNotEmpty) {
       json
         .cast<String, dynamic>()
