@@ -1,94 +1,102 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
 
-// ignore_for_file: unused_import
 
-import 'package:built_value/built_value.dart';
-import 'package:built_value/serializer.dart';
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
 
-part 'channel.g.dart';
+part of openapi.api;
 
-abstract class Channel implements Built<Channel, ChannelBuilder> {
+class Channel {
+  /// Returns a new [Channel] instance.
+  Channel({
+    this.title,
+    this.description,
+    required this.channelId,
+  });
 
-    @nullable
-    @BuiltValueField(wireName: r'title')
-    String get title;
+  String? title;
 
-    @nullable
-    @BuiltValueField(wireName: r'description')
-    String get description;
+  String? description;
 
-    @BuiltValueField(wireName: r'channel_id')
-    String get channelId;
+  String? channelId;
 
-    Channel._();
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is Channel &&
+     other.title == title &&
+     other.description == description &&
+     other.channelId == channelId;
 
-    static void _initializeBuilder(ChannelBuilder b) => b;
+  @override
+  int get hashCode =>
+  // ignore: unnecessary_parenthesis
+    (title == null ? 0 : title.hashCode) +
+    (description == null ? 0 : description.hashCode) +
+    (channelId == null ? 0 : channelId.hashCode);
 
-    factory Channel([void updates(ChannelBuilder b)]) = _$Channel;
+  @override
+  String toString() => 'Channel[title=$title, description=$description, channelId=$channelId]';
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<Channel> get serializer => _$ChannelSerializer();
-}
-
-class _$ChannelSerializer implements StructuredSerializer<Channel> {
-
-    @override
-    final Iterable<Type> types = const [Channel, _$Channel];
-    @override
-    final String wireName = r'Channel';
-
-    @override
-    Iterable<Object> serialize(Serializers serializers, Channel object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
-        if (object.title != null) {
-            result
-                ..add(r'title')
-                ..add(serializers.serialize(object.title,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.description != null) {
-            result
-                ..add(r'description')
-                ..add(serializers.serialize(object.description,
-                    specifiedType: const FullType(String)));
-        }
-        result
-            ..add(r'channel_id')
-            ..add(serializers.serialize(object.channelId,
-                specifiedType: const FullType(String)));
-        return result;
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (title != null) {
+      json[r'title'] = title;
     }
-
-    @override
-    Channel deserialize(Serializers serializers, Iterable<Object> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = ChannelBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final dynamic value = iterator.current;
-            switch (key) {
-                case r'title':
-                    result.title = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'description':
-                    result.description = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'channel_id':
-                    result.channelId = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-            }
-        }
-        return result.build();
+    if (description != null) {
+      json[r'description'] = description;
     }
+      json[r'channel_id'] = channelId;
+    return json;
+  }
+
+  /// Returns a new [Channel] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static Channel? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return Channel(
+        title: mapValueOfType<String>(json, r'title'),
+        description: mapValueOfType<String>(json, r'description'),
+        channelId: mapValueOfType<String>(json, r'channel_id'),
+      );
+    }
+    return null;
+  }
+
+  static List<Channel?>? listFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(Channel.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <Channel>[];
+
+  static Map<String, Channel?> mapFromJson(dynamic json) {
+    final map = <String, Channel?>{};
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = Channel.fromJson(value));
+    }
+    return map;
+  }
+
+  // maps a json object with a list of Channel-objects as value to a dart map
+  static Map<String, List<Channel?>?> mapListFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) {
+    final Map<String, List<Channel?>?> map = <String, List<Channel>?>{};
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = Channel.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
+    }
+    return map;
+  }
 }
 

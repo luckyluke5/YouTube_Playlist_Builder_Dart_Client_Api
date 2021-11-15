@@ -1,104 +1,52 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
-
-// ignore_for_file: unused_import
-
-library my_api.api;
-
-import 'package:dio/dio.dart';
-import 'package:built_value/serializer.dart';
-import 'package:my_api/serializers.dart';
-import 'package:my_api/auth/api_key_auth.dart';
-import 'package:my_api/auth/basic_auth.dart';
-import 'package:my_api/auth/oauth.dart';
-import 'package:my_api/api/channels_api.dart';
-import 'package:my_api/api/follows_api.dart';
-import 'package:my_api/api/groups_api.dart';
-import 'package:my_api/api/users_api.dart';
 
 
-final _defaultInterceptors = [
-  OAuthInterceptor(),
-  BasicAuthInterceptor(),
-  ApiKeyAuthInterceptor(),
-];
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
 
-class MyApi {
+library openapi.api;
 
-    static const String basePath = r'http://playlist-builder-308809.appspot.com/api';
+import 'dart:async';
+import 'dart:convert';
+import 'dart:io';
 
-    final Dio dio;
+import 'package:http/http.dart';
+import 'package:intl/intl.dart';
+import 'package:meta/meta.dart';
 
-    final Serializers serializers;
+part 'api_client.dart';
+part 'api_helper.dart';
+part 'api_exception.dart';
+part 'auth/authentication.dart';
+part 'auth/api_key_auth.dart';
+part 'auth/oauth.dart';
+part 'auth/http_basic_auth.dart';
+part 'auth/http_bearer_auth.dart';
 
-    MyApi({
-      Dio dio,
-      Serializers serializers,
-      String basePathOverride,
-      List<Interceptor> interceptors,
-    })  : this.serializers = serializers ?? standardSerializers,
-          this.dio = dio ??
-              Dio(BaseOptions(
-                baseUrl: basePathOverride ?? basePath,
-                connectTimeout: 5000,
-                receiveTimeout: 3000,
-              )) {
-      if (interceptors == null) {
-        this.dio.interceptors.addAll(_defaultInterceptors);
-      } else {
-        this.dio.interceptors.addAll(interceptors);
-      }
-    }
+part 'api/channels_api.dart';
+part 'api/follows_api.dart';
+part 'api/groups_api.dart';
+part 'api/users_api.dart';
 
-    void setOAuthToken(String name, String token) {
-        (this.dio.interceptors.firstWhere((element) => element is OAuthInterceptor, orElse: null) as OAuthInterceptor)?.tokens[name] = token;
-    }
-
-    void setBasicAuth(String name, String username, String password) {
-        (this.dio.interceptors.firstWhere((element) => element is BasicAuthInterceptor, orElse: null) as BasicAuthInterceptor)?.authInfo[name] = BasicAuthInfo(username, password);
-    }
-
-    void setApiKey(String name, String apiKey) {
-        (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor, orElse: null) as ApiKeyAuthInterceptor)?.apiKeys[name] = apiKey;
-    }
+part 'model/channel.dart';
+part 'model/follow.dart';
+part 'model/group.dart';
+part 'model/inline_response200.dart';
+part 'model/inline_response2001.dart';
+part 'model/inline_response2002.dart';
+part 'model/inline_response2003.dart';
+part 'model/user.dart';
 
 
-    /**
-    * Get ChannelsApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    ChannelsApi getChannelsApi() {
-    return ChannelsApi(dio, serializers);
-    }
+const _delimiters = {'csv': ',', 'ssv': ' ', 'tsv': '\t', 'pipes': '|'};
+const _dateEpochMarker = 'epoch';
+final _dateFormatter = DateFormat('yyyy-MM-dd');
+final _regList = RegExp(r'^List<(.*)>$');
+final _regSet = RegExp(r'^Set<(.*)>$');
+final _regMap = RegExp(r'^Map<String,(.*)>$');
 
-
-    /**
-    * Get FollowsApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    FollowsApi getFollowsApi() {
-    return FollowsApi(dio, serializers);
-    }
-
-
-    /**
-    * Get GroupsApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    GroupsApi getGroupsApi() {
-    return GroupsApi(dio, serializers);
-    }
-
-
-    /**
-    * Get UsersApi instance, base route and serializer can be overridden by a given but be careful,
-    * by doing that all interceptors will not be executed
-    */
-    UsersApi getUsersApi() {
-    return UsersApi(dio, serializers);
-    }
-
-
-}
+ApiClient defaultApiClient = ApiClient();

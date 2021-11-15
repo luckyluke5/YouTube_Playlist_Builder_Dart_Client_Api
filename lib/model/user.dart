@@ -1,111 +1,115 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.7
 
-// ignore_for_file: unused_import
 
-import 'package:built_collection/built_collection.dart';
-import 'package:built_value/built_value.dart';
-import 'package:built_value/serializer.dart';
+// ignore_for_file: unused_element, unused_import
+// ignore_for_file: always_put_required_named_parameters_first
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: lines_longer_than_80_chars
 
-part 'user.g.dart';
+part of openapi.api;
 
-abstract class User implements Built<User, UserBuilder> {
+class User {
+  /// Returns a new [User] instance.
+  User({
+    this.url,
+    required this.username,
+    this.email,
+    this.groups = const {},
+  });
 
-    @nullable
-    @BuiltValueField(wireName: r'url')
-    String get url;
+  String? url;
 
-    /// Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
-    @BuiltValueField(wireName: r'username')
-    String get username;
+  /// Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.
+  String? username;
 
-    @nullable
-    @BuiltValueField(wireName: r'email')
-    String get email;
+  String? email;
 
-    /// The groups this user belongs to. A user will get all permissions granted to each of their groups.
-    @nullable
-    @BuiltValueField(wireName: r'groups')
-    BuiltSet<String> get groups;
+  /// The groups this user belongs to. A user will get all permissions granted to each of their groups.
+  Set<String>? groups;
 
-    User._();
+  @override
+  bool operator ==(Object other) => identical(this, other) || other is User &&
+     other.url == url &&
+     other.username == username &&
+     other.email == email &&
+     other.groups == groups;
 
-    static void _initializeBuilder(UserBuilder b) => b;
+  @override
+  int get hashCode =>
+  // ignore: unnecessary_parenthesis
+    (url == null ? 0 : url.hashCode) +
+    (username == null ? 0 : username.hashCode) +
+    (email == null ? 0 : email.hashCode) +
+    (groups == null ? 0 : groups.hashCode);
 
-    factory User([void updates(UserBuilder b)]) = _$User;
+  @override
+  String toString() => 'User[url=$url, username=$username, email=$email, groups=$groups]';
 
-    @BuiltValueSerializer(custom: true)
-    static Serializer<User> get serializer => _$UserSerializer();
-}
-
-class _$UserSerializer implements StructuredSerializer<User> {
-
-    @override
-    final Iterable<Type> types = const [User, _$User];
-    @override
-    final String wireName = r'User';
-
-    @override
-    Iterable<Object> serialize(Serializers serializers, User object,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = <Object>[];
-        if (object.url != null) {
-            result
-                ..add(r'url')
-                ..add(serializers.serialize(object.url,
-                    specifiedType: const FullType(String)));
-        }
-        result
-            ..add(r'username')
-            ..add(serializers.serialize(object.username,
-                specifiedType: const FullType(String)));
-        if (object.email != null) {
-            result
-                ..add(r'email')
-                ..add(serializers.serialize(object.email,
-                    specifiedType: const FullType(String)));
-        }
-        if (object.groups != null) {
-            result
-                ..add(r'groups')
-                ..add(serializers.serialize(object.groups,
-                    specifiedType: const FullType(BuiltSet, [FullType(String)])));
-        }
-        return result;
+  Map<String, dynamic> toJson() {
+    final json = <String, dynamic>{};
+    if (url != null) {
+      json[r'url'] = url;
     }
-
-    @override
-    User deserialize(Serializers serializers, Iterable<Object> serialized,
-        {FullType specifiedType = FullType.unspecified}) {
-        final result = UserBuilder();
-
-        final iterator = serialized.iterator;
-        while (iterator.moveNext()) {
-            final key = iterator.current as String;
-            iterator.moveNext();
-            final dynamic value = iterator.current;
-            switch (key) {
-                case r'url':
-                    result.url = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'username':
-                    result.username = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'email':
-                    result.email = serializers.deserialize(value,
-                        specifiedType: const FullType(String)) as String;
-                    break;
-                case r'groups':
-                    result.groups.replace(serializers.deserialize(value,
-                        specifiedType: const FullType(BuiltSet, [FullType(String)])) as BuiltSet<String>);
-                    break;
-            }
-        }
-        return result.build();
+      json[r'username'] = username;
+    if (email != null) {
+      json[r'email'] = email;
     }
+    if (groups != null) {
+      json[r'groups'] = groups;
+    }
+    return json;
+  }
+
+  /// Returns a new [User] instance and imports its values from
+  /// [value] if it's a [Map], null otherwise.
+  // ignore: prefer_constructors_over_static_methods
+  static User? fromJson(dynamic value) {
+    if (value is Map) {
+      final json = value.cast<String, dynamic>();
+      return User(
+        url: mapValueOfType<String>(json, r'url'),
+        username: mapValueOfType<String>(json, r'username'),
+        email: mapValueOfType<String>(json, r'email'),
+        groups: json[r'groups'] is Set
+          ? (json[r'groups'] as Set).cast<String>()
+          : null,
+      );
+    }
+    return null;
+  }
+
+  static List<User?>? listFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) =>
+    json is List && json.isNotEmpty
+      ? json.map(User.fromJson).toList(growable: true == growable)
+      : true == emptyIsNull ? null : <User>[];
+
+  static Map<String, User?> mapFromJson(dynamic json) {
+    final map = <String, User?>{};
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) => map[key] = User.fromJson(value));
+    }
+    return map;
+  }
+
+  // maps a json object with a list of User-objects as value to a dart map
+  static Map<String, List<User?>?> mapListFromJson(dynamic json, {bool? emptyIsNull, bool? growable,}) {
+    final Map<String, List<User?>?> map = <String, List<User>?>{};
+    if (json is Map && json.isNotEmpty) {
+      json
+        .cast<String, dynamic>()
+        .forEach((key, dynamic value) {
+          map[key] = User.listFromJson(
+            value,
+            emptyIsNull: emptyIsNull,
+            growable: growable,
+          );
+        });
+    }
+    return map;
+  }
 }
 

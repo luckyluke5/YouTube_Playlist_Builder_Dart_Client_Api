@@ -22,11 +22,11 @@ Method | HTTP request | Description
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new ChannelsApi();
-var page = 56; // int | A page number within the paginated result set.
+final api_instance = ChannelsApi();
+final page = 56; // int | A page number within the paginated result set.
 
 try {
-    var result = api_instance.channelsList(page);
+    final result = api_instance.channelsList(page);
     print(result);
 } catch (e) {
     print('Exception when calling ChannelsApi->channelsList: $e\n');
@@ -63,11 +63,11 @@ No authorization required
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new ChannelsApi();
-var channelId = channelId_example; // String | A unique value identifying this channel.
+final api_instance = ChannelsApi();
+final channelId = channelId_example; // String | A unique value identifying this channel.
 
 try {
-    var result = api_instance.channelsRead(channelId);
+    final result = api_instance.channelsRead(channelId);
     print(result);
 } catch (e) {
     print('Exception when calling ChannelsApi->channelsRead: $e\n');

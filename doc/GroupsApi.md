@@ -28,11 +28,11 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new GroupsApi();
-var data = new Group(); // Group | 
+final api_instance = GroupsApi();
+final data = Group(); // Group | 
 
 try {
-    var result = api_instance.groupsCreate(data);
+    final result = api_instance.groupsCreate(data);
     print(result);
 } catch (e) {
     print('Exception when calling GroupsApi->groupsCreate: $e\n');
@@ -71,8 +71,8 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new GroupsApi();
-var id = 56; // int | A unique integer value identifying this group.
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
 
 try {
     api_instance.groupsDelete(id);
@@ -113,11 +113,11 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new GroupsApi();
-var page = 56; // int | A page number within the paginated result set.
+final api_instance = GroupsApi();
+final page = 56; // int | A page number within the paginated result set.
 
 try {
-    var result = api_instance.groupsList(page);
+    final result = api_instance.groupsList(page);
     print(result);
 } catch (e) {
     print('Exception when calling GroupsApi->groupsList: $e\n');
@@ -156,12 +156,12 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new GroupsApi();
-var id = 56; // int | A unique integer value identifying this group.
-var data = new Group(); // Group | 
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
+final data = Group(); // Group | 
 
 try {
-    var result = api_instance.groupsPartialUpdate(id, data);
+    final result = api_instance.groupsPartialUpdate(id, data);
     print(result);
 } catch (e) {
     print('Exception when calling GroupsApi->groupsPartialUpdate: $e\n');
@@ -201,11 +201,11 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new GroupsApi();
-var id = 56; // int | A unique integer value identifying this group.
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
 
 try {
-    var result = api_instance.groupsRead(id);
+    final result = api_instance.groupsRead(id);
     print(result);
 } catch (e) {
     print('Exception when calling GroupsApi->groupsRead: $e\n');
@@ -244,12 +244,12 @@ API endpoint that allows groups to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-var api_instance = new GroupsApi();
-var id = 56; // int | A unique integer value identifying this group.
-var data = new Group(); // Group | 
+final api_instance = GroupsApi();
+final id = 56; // int | A unique integer value identifying this group.
+final data = Group(); // Group | 
 
 try {
-    var result = api_instance.groupsUpdate(id, data);
+    final result = api_instance.groupsUpdate(id, data);
     print(result);
 } catch (e) {
     print('Exception when calling GroupsApi->groupsUpdate: $e\n');
