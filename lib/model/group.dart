@@ -1,93 +1,80 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.7
 
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: unused_import
 
-part of openapi.api;
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
 
-class Group {
-  /// Returns a new [Group] instance.
-  Group({
-    this.url,
-    @required this.name,
-  });
+part 'group.g.dart';
 
-  String url;
+abstract class Group implements Built<Group, GroupBuilder> {
 
-  String name;
+    @nullable
+    @BuiltValueField(wireName: r'url')
+    String get url;
 
-  @override
-  bool operator ==(Object other) => identical(this, other) || other is Group &&
-     other.url == url &&
-     other.name == name;
+    @BuiltValueField(wireName: r'name')
+    String get name;
 
-  @override
-  int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (url == null ? 0 : url.hashCode) +
-    (name == null ? 0 : name.hashCode);
+    Group._();
 
-  @override
-  String toString() => 'Group[url=$url, name=$name]';
+    static void _initializeBuilder(GroupBuilder b) => b;
 
-  Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-    if (url != null) {
-      json[r'url'] = url;
+    factory Group([void updates(GroupBuilder b)]) = _$Group;
+
+    @BuiltValueSerializer(custom: true)
+    static Serializer<Group> get serializer => _$GroupSerializer();
+}
+
+class _$GroupSerializer implements StructuredSerializer<Group> {
+
+    @override
+    final Iterable<Type> types = const [Group, _$Group];
+    @override
+    final String wireName = r'Group';
+
+    @override
+    Iterable<Object> serialize(Serializers serializers, Group object,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = <Object>[];
+        if (object.url != null) {
+            result
+                ..add(r'url')
+                ..add(serializers.serialize(object.url,
+                    specifiedType: const FullType(String)));
+        }
+        result
+            ..add(r'name')
+            ..add(serializers.serialize(object.name,
+                specifiedType: const FullType(String)));
+        return result;
     }
-      json[r'name'] = name;
-    return json;
-  }
 
-  /// Returns a new [Group] instance and imports its values from
-  /// [value] if it's a [Map], null otherwise.
-  // ignore: prefer_constructors_over_static_methods
-  static Group fromJson(dynamic value) {
-    if (value is Map) {
-      final json = value.cast<String, dynamic>();
-      return Group(
-        url: mapValueOfType<String>(json, r'url'),
-        name: mapValueOfType<String>(json, r'name'),
-      );
+    @override
+    Group deserialize(Serializers serializers, Iterable<Object> serialized,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = GroupBuilder();
+
+        final iterator = serialized.iterator;
+        while (iterator.moveNext()) {
+            final key = iterator.current as String;
+            iterator.moveNext();
+            final dynamic value = iterator.current;
+            switch (key) {
+                case r'url':
+                    result.url = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'name':
+                    result.name = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+            }
+        }
+        return result.build();
     }
-    return null;
-  }
-
-  static List<Group> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(Group.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <Group>[];
-
-  static Map<String, Group> mapFromJson(dynamic json) {
-    final map = <String, Group>{};
-    if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = Group.fromJson(value));
-    }
-    return map;
-  }
-
-  // maps a json object with a list of Group-objects as value to a dart map
-  static Map<String, List<Group>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<Group>>{};
-    if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = Group.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
-    }
-    return map;
-  }
 }
 

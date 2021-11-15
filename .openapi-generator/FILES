@@ -1,6 +1,5 @@
 .gitignore
 .openapi-generator-ignore
-.travis.yml
 README.md
 analysis_options.yaml
 doc/Channel.md
@@ -15,19 +14,15 @@ doc/InlineResponse2002.md
 doc/InlineResponse2003.md
 doc/User.md
 doc/UsersApi.md
-git_push.sh
 lib/api.dart
 lib/api/channels_api.dart
 lib/api/follows_api.dart
 lib/api/groups_api.dart
 lib/api/users_api.dart
-lib/api_client.dart
-lib/api_exception.dart
-lib/api_helper.dart
+lib/api_util.dart
 lib/auth/api_key_auth.dart
-lib/auth/authentication.dart
-lib/auth/http_basic_auth.dart
-lib/auth/http_bearer_auth.dart
+lib/auth/auth.dart
+lib/auth/basic_auth.dart
 lib/auth/oauth.dart
 lib/model/channel.dart
 lib/model/follow.dart
@@ -37,6 +32,7 @@ lib/model/inline_response2001.dart
 lib/model/inline_response2002.dart
 lib/model/inline_response2003.dart
 lib/model/user.dart
+lib/serializers.dart
 pubspec.yaml
 test/channel_test.dart
 test/channels_api_test.dart

@@ -1,109 +1,107 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.7
 
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: unused_import
 
-part of openapi.api;
+import 'package:built_collection/built_collection.dart';
+import 'package:my_api/model/user.dart';
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
 
-class InlineResponse2003 {
-  /// Returns a new [InlineResponse2003] instance.
-  InlineResponse2003({
-    @required this.count,
-    this.next,
-    this.previous,
-    this.results = const [],
-  });
+part 'inline_response2003.g.dart';
 
-  int count;
+abstract class InlineResponse2003 implements Built<InlineResponse2003, InlineResponse2003Builder> {
 
-  String next;
+    @BuiltValueField(wireName: r'count')
+    int get count;
 
-  String previous;
+    @nullable
+    @BuiltValueField(wireName: r'next')
+    String get next;
 
-  List<User> results;
+    @nullable
+    @BuiltValueField(wireName: r'previous')
+    String get previous;
 
-  @override
-  bool operator ==(Object other) => identical(this, other) || other is InlineResponse2003 &&
-     other.count == count &&
-     other.next == next &&
-     other.previous == previous &&
-     other.results == results;
+    @BuiltValueField(wireName: r'results')
+    BuiltList<User> get results;
 
-  @override
-  int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (count == null ? 0 : count.hashCode) +
-    (next == null ? 0 : next.hashCode) +
-    (previous == null ? 0 : previous.hashCode) +
-    (results == null ? 0 : results.hashCode);
+    InlineResponse2003._();
 
-  @override
-  String toString() => 'InlineResponse2003[count=$count, next=$next, previous=$previous, results=$results]';
+    static void _initializeBuilder(InlineResponse2003Builder b) => b;
 
-  Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'count'] = count;
-    if (next != null) {
-      json[r'next'] = next;
+    factory InlineResponse2003([void updates(InlineResponse2003Builder b)]) = _$InlineResponse2003;
+
+    @BuiltValueSerializer(custom: true)
+    static Serializer<InlineResponse2003> get serializer => _$InlineResponse2003Serializer();
+}
+
+class _$InlineResponse2003Serializer implements StructuredSerializer<InlineResponse2003> {
+
+    @override
+    final Iterable<Type> types = const [InlineResponse2003, _$InlineResponse2003];
+    @override
+    final String wireName = r'InlineResponse2003';
+
+    @override
+    Iterable<Object> serialize(Serializers serializers, InlineResponse2003 object,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = <Object>[];
+        result
+            ..add(r'count')
+            ..add(serializers.serialize(object.count,
+                specifiedType: const FullType(int)));
+        if (object.next != null) {
+            result
+                ..add(r'next')
+                ..add(serializers.serialize(object.next,
+                    specifiedType: const FullType(String)));
+        }
+        if (object.previous != null) {
+            result
+                ..add(r'previous')
+                ..add(serializers.serialize(object.previous,
+                    specifiedType: const FullType(String)));
+        }
+        result
+            ..add(r'results')
+            ..add(serializers.serialize(object.results,
+                specifiedType: const FullType(BuiltList, [FullType(User)])));
+        return result;
     }
-    if (previous != null) {
-      json[r'previous'] = previous;
-    }
-      json[r'results'] = results;
-    return json;
-  }
 
-  /// Returns a new [InlineResponse2003] instance and imports its values from
-  /// [value] if it's a [Map], null otherwise.
-  // ignore: prefer_constructors_over_static_methods
-  static InlineResponse2003 fromJson(dynamic value) {
-    if (value is Map) {
-      final json = value.cast<String, dynamic>();
-      return InlineResponse2003(
-        count: mapValueOfType<int>(json, r'count'),
-        next: mapValueOfType<String>(json, r'next'),
-        previous: mapValueOfType<String>(json, r'previous'),
-        results: User.listFromJson(json[r'results']),
-      );
-    }
-    return null;
-  }
+    @override
+    InlineResponse2003 deserialize(Serializers serializers, Iterable<Object> serialized,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = InlineResponse2003Builder();
 
-  static List<InlineResponse2003> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(InlineResponse2003.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <InlineResponse2003>[];
-
-  static Map<String, InlineResponse2003> mapFromJson(dynamic json) {
-    final map = <String, InlineResponse2003>{};
-    if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = InlineResponse2003.fromJson(value));
+        final iterator = serialized.iterator;
+        while (iterator.moveNext()) {
+            final key = iterator.current as String;
+            iterator.moveNext();
+            final dynamic value = iterator.current;
+            switch (key) {
+                case r'count':
+                    result.count = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+                case r'next':
+                    result.next = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'previous':
+                    result.previous = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'results':
+                    result.results.replace(serializers.deserialize(value,
+                        specifiedType: const FullType(BuiltList, [FullType(User)])) as BuiltList<User>);
+                    break;
+            }
+        }
+        return result.build();
     }
-    return map;
-  }
-
-  // maps a json object with a list of InlineResponse2003-objects as value to a dart map
-  static Map<String, List<InlineResponse2003>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<InlineResponse2003>>{};
-    if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = InlineResponse2003.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
-    }
-    return map;
-  }
 }
 

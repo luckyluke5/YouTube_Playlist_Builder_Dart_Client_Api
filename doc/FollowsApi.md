@@ -21,11 +21,11 @@ Method | HTTP request | Description
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = FollowsApi();
-final page = 56; // int | A page number within the paginated result set.
+var api_instance = new FollowsApi();
+var page = 56; // int | A page number within the paginated result set.
 
 try {
-    final result = api_instance.followsList(page);
+    var result = api_instance.followsList(page);
     print(result);
 } catch (e) {
     print('Exception when calling FollowsApi->followsList: $e\n');

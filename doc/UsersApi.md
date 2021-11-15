@@ -28,11 +28,11 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = UsersApi();
-final data = User(); // User | 
+var api_instance = new UsersApi();
+var data = new User(); // User | 
 
 try {
-    final result = api_instance.usersCreate(data);
+    var result = api_instance.usersCreate(data);
     print(result);
 } catch (e) {
     print('Exception when calling UsersApi->usersCreate: $e\n');
@@ -71,8 +71,8 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
+var api_instance = new UsersApi();
+var id = 56; // int | A unique integer value identifying this user.
 
 try {
     api_instance.usersDelete(id);
@@ -113,11 +113,11 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = UsersApi();
-final page = 56; // int | A page number within the paginated result set.
+var api_instance = new UsersApi();
+var page = 56; // int | A page number within the paginated result set.
 
 try {
-    final result = api_instance.usersList(page);
+    var result = api_instance.usersList(page);
     print(result);
 } catch (e) {
     print('Exception when calling UsersApi->usersList: $e\n');
@@ -156,12 +156,12 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
-final data = User(); // User | 
+var api_instance = new UsersApi();
+var id = 56; // int | A unique integer value identifying this user.
+var data = new User(); // User | 
 
 try {
-    final result = api_instance.usersPartialUpdate(id, data);
+    var result = api_instance.usersPartialUpdate(id, data);
     print(result);
 } catch (e) {
     print('Exception when calling UsersApi->usersPartialUpdate: $e\n');
@@ -201,11 +201,11 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
+var api_instance = new UsersApi();
+var id = 56; // int | A unique integer value identifying this user.
 
 try {
-    final result = api_instance.usersRead(id);
+    var result = api_instance.usersRead(id);
     print(result);
 } catch (e) {
     print('Exception when calling UsersApi->usersRead: $e\n');
@@ -244,12 +244,12 @@ API endpoint that allows users to be viewed or edited.
 ```dart
 import 'package:my_api/api.dart';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
-final data = User(); // User | 
+var api_instance = new UsersApi();
+var id = 56; // int | A unique integer value identifying this user.
+var data = new User(); // User | 
 
 try {
-    final result = api_instance.usersUpdate(id, data);
+    var result = api_instance.usersUpdate(id, data);
     print(result);
 } catch (e) {
     print('Exception when calling UsersApi->usersUpdate: $e\n');

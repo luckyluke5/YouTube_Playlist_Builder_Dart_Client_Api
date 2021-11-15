@@ -1,22 +1,20 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.7
 
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: unused_import
 
 import 'package:my_api/api.dart';
+import 'package:my_api/api/follows_api.dart';
 import 'package:test/test.dart';
 
 
 /// tests for FollowsApi
 void main() {
-  final instance = FollowsApi();
+  final instance = MyApi().getFollowsApi();
 
-  group('tests for FollowsApi', () {
+  group(FollowsApi, () {
     //Future<InlineResponse2001> followsList({ int page }) async
     test('test followsList', () async {
       // TODO

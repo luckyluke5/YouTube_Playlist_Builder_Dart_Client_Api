@@ -1,102 +1,91 @@
 //
 // AUTO-GENERATED FILE, DO NOT MODIFY!
 //
-// @dart=2.0
+// @dart=2.7
 
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
+// ignore_for_file: unused_import
 
-part of openapi.api;
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
 
-class Follow {
-  /// Returns a new [Follow] instance.
-  Follow({
-    @required this.user,
-    @required this.channel,
-    this.score,
-  });
+part 'follow.g.dart';
 
-  String user;
+abstract class Follow implements Built<Follow, FollowBuilder> {
 
-  String channel;
+    @BuiltValueField(wireName: r'user')
+    String get user;
 
-  // minimum: -2147483648
-  // maximum: 2147483647
-  int score;
+    @BuiltValueField(wireName: r'channel')
+    String get channel;
 
-  @override
-  bool operator ==(Object other) => identical(this, other) || other is Follow &&
-     other.user == user &&
-     other.channel == channel &&
-     other.score == score;
+    @nullable
+    @BuiltValueField(wireName: r'score')
+    int get score;
 
-  @override
-  int get hashCode =>
-  // ignore: unnecessary_parenthesis
-    (user == null ? 0 : user.hashCode) +
-    (channel == null ? 0 : channel.hashCode) +
-    (score == null ? 0 : score.hashCode);
+    Follow._();
 
-  @override
-  String toString() => 'Follow[user=$user, channel=$channel, score=$score]';
+    static void _initializeBuilder(FollowBuilder b) => b;
 
-  Map<String, dynamic> toJson() {
-    final json = <String, dynamic>{};
-      json[r'user'] = user;
-      json[r'channel'] = channel;
-    if (score != null) {
-      json[r'score'] = score;
+    factory Follow([void updates(FollowBuilder b)]) = _$Follow;
+
+    @BuiltValueSerializer(custom: true)
+    static Serializer<Follow> get serializer => _$FollowSerializer();
+}
+
+class _$FollowSerializer implements StructuredSerializer<Follow> {
+
+    @override
+    final Iterable<Type> types = const [Follow, _$Follow];
+    @override
+    final String wireName = r'Follow';
+
+    @override
+    Iterable<Object> serialize(Serializers serializers, Follow object,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = <Object>[];
+        result
+            ..add(r'user')
+            ..add(serializers.serialize(object.user,
+                specifiedType: const FullType(String)));
+        result
+            ..add(r'channel')
+            ..add(serializers.serialize(object.channel,
+                specifiedType: const FullType(String)));
+        if (object.score != null) {
+            result
+                ..add(r'score')
+                ..add(serializers.serialize(object.score,
+                    specifiedType: const FullType(int)));
+        }
+        return result;
     }
-    return json;
-  }
 
-  /// Returns a new [Follow] instance and imports its values from
-  /// [value] if it's a [Map], null otherwise.
-  // ignore: prefer_constructors_over_static_methods
-  static Follow fromJson(dynamic value) {
-    if (value is Map) {
-      final json = value.cast<String, dynamic>();
-      return Follow(
-        user: mapValueOfType<String>(json, r'user'),
-        channel: mapValueOfType<String>(json, r'channel'),
-        score: mapValueOfType<int>(json, r'score'),
-      );
+    @override
+    Follow deserialize(Serializers serializers, Iterable<Object> serialized,
+        {FullType specifiedType = FullType.unspecified}) {
+        final result = FollowBuilder();
+
+        final iterator = serialized.iterator;
+        while (iterator.moveNext()) {
+            final key = iterator.current as String;
+            iterator.moveNext();
+            final dynamic value = iterator.current;
+            switch (key) {
+                case r'user':
+                    result.user = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'channel':
+                    result.channel = serializers.deserialize(value,
+                        specifiedType: const FullType(String)) as String;
+                    break;
+                case r'score':
+                    result.score = serializers.deserialize(value,
+                        specifiedType: const FullType(int)) as int;
+                    break;
+            }
+        }
+        return result.build();
     }
-    return null;
-  }
-
-  static List<Follow> listFromJson(dynamic json, {bool emptyIsNull, bool growable,}) =>
-    json is List && json.isNotEmpty
-      ? json.map(Follow.fromJson).toList(growable: true == growable)
-      : true == emptyIsNull ? null : <Follow>[];
-
-  static Map<String, Follow> mapFromJson(dynamic json) {
-    final map = <String, Follow>{};
-    if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) => map[key] = Follow.fromJson(value));
-    }
-    return map;
-  }
-
-  // maps a json object with a list of Follow-objects as value to a dart map
-  static Map<String, List<Follow>> mapListFromJson(dynamic json, {bool emptyIsNull, bool growable,}) {
-    final map = <String, List<Follow>>{};
-    if (json is Map && json.isNotEmpty) {
-      json
-        .cast<String, dynamic>()
-        .forEach((key, dynamic value) {
-          map[key] = Follow.listFromJson(
-            value,
-            emptyIsNull: emptyIsNull,
-            growable: growable,
-          );
-        });
-    }
-    return map;
-  }
 }
 
