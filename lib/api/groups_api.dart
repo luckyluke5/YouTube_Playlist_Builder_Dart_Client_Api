@@ -39,7 +39,7 @@ class GroupsApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>['application/json'];
 
 
@@ -100,7 +100,7 @@ class GroupsApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>[];
 
 
@@ -154,7 +154,7 @@ class GroupsApi {
       queryParams.addAll(_convertParametersForCollectionFormat('', 'page', page));
     }
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>[];
 
 
@@ -221,7 +221,7 @@ class GroupsApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>['application/json'];
 
 
@@ -285,7 +285,7 @@ class GroupsApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>[];
 
 
@@ -352,7 +352,7 @@ class GroupsApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>['application/json'];
 
 

@@ -38,7 +38,7 @@ class FollowsApi {
       queryParams.addAll(_convertParametersForCollectionFormat('', 'page', page));
     }
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>[];
 
 

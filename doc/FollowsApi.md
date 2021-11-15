@@ -5,7 +5,7 @@
 import 'package:my_api/api.dart';
 ```
 
-All URIs are relative to *http://playlist-builder-308809.appspot.com/api*
+All URIs are relative to *https://playlist-builder-308809.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,6 +20,9 @@ Method | HTTP request | Description
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = FollowsApi();
 final page = 56; // int | A page number within the paginated result set.
@@ -44,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 

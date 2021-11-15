@@ -38,7 +38,7 @@ class ChannelsApi {
       queryParams.addAll(_convertParametersForCollectionFormat('', 'page', page));
     }
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>[];
 
 
@@ -95,7 +95,7 @@ class ChannelsApi {
     final headerParams = <String, String>{};
     final formParams = <String, String>{};
 
-    const authNames = <String>[];
+    const authNames = <String>['Basic'];
     const contentTypes = <String>[];
 
 

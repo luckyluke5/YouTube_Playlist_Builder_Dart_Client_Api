@@ -5,7 +5,7 @@
 import 'package:my_api/api.dart';
 ```
 
-All URIs are relative to *http://playlist-builder-308809.appspot.com/api*
+All URIs are relative to *https://playlist-builder-308809.appspot.com/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -27,6 +27,9 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = UsersApi();
 final data = User(); // User | 
@@ -51,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -70,6 +73,9 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = UsersApi();
 final id = 56; // int | A unique integer value identifying this user.
@@ -93,7 +99,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -112,6 +118,9 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = UsersApi();
 final page = 56; // int | A page number within the paginated result set.
@@ -136,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -155,6 +164,9 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = UsersApi();
 final id = 56; // int | A unique integer value identifying this user.
@@ -181,7 +193,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -200,6 +212,9 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = UsersApi();
 final id = 56; // int | A unique integer value identifying this user.
@@ -224,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 
@@ -243,6 +258,9 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = UsersApi();
 final id = 56; // int | A unique integer value identifying this user.
@@ -269,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[Basic](../README.md#Basic)
 
 ### HTTP request headers
 

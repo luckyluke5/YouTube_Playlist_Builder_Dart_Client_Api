@@ -11,7 +11,9 @@
 part of openapi.api;
 
 class ApiClient {
-  ApiClient({this.basePath = 'http://playlist-builder-308809.appspot.com/api'}) {
+  ApiClient({this.basePath = 'https://playlist-builder-308809.appspot.com/api'}) {
+    // Setup authentications (key: authentication name, value: authentication).
+    _authentications[r'Basic'] = HttpBasicAuth();
   }
 
   final String basePath;

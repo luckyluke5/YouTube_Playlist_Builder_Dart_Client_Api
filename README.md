@@ -39,6 +39,9 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```dart
 import 'package:my_api/api.dart';
 
+// TODO Configure HTTP basic authorization: Basic
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
 final api_instance = ChannelsApi();
 final page = 56; // int | A page number within the paginated result set.
@@ -54,7 +57,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://playlist-builder-308809.appspot.com/api*
+All URIs are relative to *https://playlist-builder-308809.appspot.com/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -89,7 +92,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## Basic
+
+- **Type**: HTTP Basic authentication
 
 
 ## Author
