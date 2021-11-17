@@ -9,13 +9,10 @@ import 'package:my_api/src/auth/api_key_auth.dart';
 import 'package:my_api/src/auth/basic_auth.dart';
 import 'package:my_api/src/auth/bearer_auth.dart';
 import 'package:my_api/src/auth/oauth.dart';
-import 'package:my_api/src/api/channels_api.dart';
-import 'package:my_api/src/api/follows_api.dart';
-import 'package:my_api/src/api/groups_api.dart';
-import 'package:my_api/src/api/users_api.dart';
+import 'package:my_api/src/api/api_api.dart';
 
 class MyApi {
-  static const String basePath = r'https://playlist-builder-308809.appspot.com/api';
+  static const String basePath = r'http://localhost';
 
   final Dio dio;
   final Serializers serializers;
@@ -68,27 +65,9 @@ class MyApi {
     }
   }
 
-  /// Get ChannelsApi instance, base route and serializer can be overridden by a given but be careful,
+  /// Get ApiApi instance, base route and serializer can be overridden by a given but be careful,
   /// by doing that all interceptors will not be executed
-  ChannelsApi getChannelsApi() {
-    return ChannelsApi(dio, serializers);
-  }
-
-  /// Get FollowsApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  FollowsApi getFollowsApi() {
-    return FollowsApi(dio, serializers);
-  }
-
-  /// Get GroupsApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  GroupsApi getGroupsApi() {
-    return GroupsApi(dio, serializers);
-  }
-
-  /// Get UsersApi instance, base route and serializer can be overridden by a given but be careful,
-  /// by doing that all interceptors will not be executed
-  UsersApi getUsersApi() {
-    return UsersApi(dio, serializers);
+  ApiApi getApiApi() {
+    return ApiApi(dio, serializers);
   }
 }
