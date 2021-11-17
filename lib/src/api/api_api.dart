@@ -57,16 +57,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -164,16 +156,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -271,16 +255,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -332,16 +308,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -393,16 +361,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -486,16 +446,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -579,16 +531,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -672,16 +616,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -767,16 +703,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -876,16 +804,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -983,16 +903,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -1071,16 +983,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -1159,16 +1063,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -1249,16 +1145,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
@@ -1358,16 +1246,8 @@ class ApiApi {
         'secure': <Map<String, String>>[
           {
             'type': 'http',
-            'scheme': 'basic',
-            'name': 'basicAuth',
-          },{
-            'type': 'oauth2',
-            'name': 'oauth-test',
-          },{
-            'type': 'apiKey',
-            'name': 'sessionAuth',
-            'keyName': 'JSESSIONID',
-            'where': '',
+            'scheme': 'bearer',
+            'name': 'googleIdentityPlatformAuth',
           },
         ],
         ...?extra,
