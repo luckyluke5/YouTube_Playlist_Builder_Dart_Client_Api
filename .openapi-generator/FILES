@@ -31,3 +31,12 @@ lib/src/model/inline_response2003.dart
 lib/src/model/user.dart
 lib/src/serializers.dart
 pubspec.yaml
+test/api_api_test.dart
+test/channel_test.dart
+test/follow_test.dart
+test/group_test.dart
+test/inline_response2001_test.dart
+test/inline_response2002_test.dart
+test/inline_response2003_test.dart
+test/inline_response200_test.dart
+test/user_test.dart

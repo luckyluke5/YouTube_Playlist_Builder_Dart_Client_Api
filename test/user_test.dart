@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:my_api/api.dart';
 import 'package:test/test.dart';
+import 'package:my_api/my_api.dart';
 
 // tests for User
 void main() {
-  final instance = User();
+  final instance = UserBuilder();
+  // TODO add properties to the builder and call build()
 
-  group('test User', () {
+  group(User, () {
     // String url
     test('to test the property `url`', () async {
       // TODO
@@ -33,12 +24,10 @@ void main() {
     });
 
     // The groups this user belongs to. A user will get all permissions granted to each of their groups.
-    // Set<String> groups (default value: const {})
+    // BuiltList<String> groups
     test('to test the property `groups`', () async {
       // TODO
     });
 
-
   });
-
 }

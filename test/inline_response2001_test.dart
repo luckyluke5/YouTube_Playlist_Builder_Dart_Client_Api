@@ -1,21 +1,12 @@
-//
-// AUTO-GENERATED FILE, DO NOT MODIFY!
-//
-
-
-// ignore_for_file: unused_element, unused_import
-// ignore_for_file: always_put_required_named_parameters_first
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: lines_longer_than_80_chars
-
-import 'package:my_api/api.dart';
 import 'package:test/test.dart';
+import 'package:my_api/my_api.dart';
 
 // tests for InlineResponse2001
 void main() {
-  final instance = InlineResponse2001();
+  final instance = InlineResponse2001Builder();
+  // TODO add properties to the builder and call build()
 
-  group('test InlineResponse2001', () {
+  group(InlineResponse2001, () {
     // int count
     test('to test the property `count`', () async {
       // TODO
@@ -31,12 +22,10 @@ void main() {
       // TODO
     });
 
-    // List<Follow> results (default value: const [])
+    // BuiltList<Group> results
     test('to test the property `results`', () async {
       // TODO
     });
 
-
   });
-
 }
