@@ -40,13 +40,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final Group group = ; // Group | 
+var api_instance = new ApiApi();
+var group = new Group(); // Group | 
 
 try {
-    final response = api.createGroup(group);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.createGroup(group);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->createGroup: $e\n');
 }
 ```
@@ -86,13 +86,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final User user = ; // User | 
+var api_instance = new ApiApi();
+var user = new User(); // User | 
 
 try {
-    final response = api.createUser(user);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.createUser(user);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->createUser: $e\n');
 }
 ```
@@ -132,12 +132,12 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this group.
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this group.
 
 try {
-    api.destroyGroup(id);
-} catch on DioError (e) {
+    api_instance.destroyGroup(id);
+} catch (e) {
     print('Exception when calling ApiApi->destroyGroup: $e\n');
 }
 ```
@@ -177,12 +177,12 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this user.
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this user.
 
 try {
-    api.destroyUser(id);
-} catch on DioError (e) {
+    api_instance.destroyUser(id);
+} catch (e) {
     print('Exception when calling ApiApi->destroyUser: $e\n');
 }
 ```
@@ -220,13 +220,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final int page = 56; // int | A page number within the paginated result set.
+var api_instance = new ApiApi();
+var page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.listChannels(page);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.listChannels(page);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->listChannels: $e\n');
 }
 ```
@@ -264,13 +264,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final int page = 56; // int | A page number within the paginated result set.
+var api_instance = new ApiApi();
+var page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.listFollows(page);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.listFollows(page);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->listFollows: $e\n');
 }
 ```
@@ -310,13 +310,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final int page = 56; // int | A page number within the paginated result set.
+var api_instance = new ApiApi();
+var page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.listGroups(page);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.listGroups(page);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->listGroups: $e\n');
 }
 ```
@@ -356,13 +356,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final int page = 56; // int | A page number within the paginated result set.
+var api_instance = new ApiApi();
+var page = 56; // int | A page number within the paginated result set.
 
 try {
-    final response = api.listUsers(page);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.listUsers(page);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->listUsers: $e\n');
 }
 ```
@@ -402,14 +402,14 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this group.
-final Group group = ; // Group | 
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this group.
+var group = new Group(); // Group | 
 
 try {
-    final response = api.partialUpdateGroup(id, group);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.partialUpdateGroup(id, group);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->partialUpdateGroup: $e\n');
 }
 ```
@@ -450,14 +450,14 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this user.
-final User user = ; // User | 
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this user.
+var user = new User(); // User | 
 
 try {
-    final response = api.partialUpdateUser(id, user);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.partialUpdateUser(id, user);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->partialUpdateUser: $e\n');
 }
 ```
@@ -496,13 +496,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String channelId = channelId_example; // String | A unique value identifying this channel.
+var api_instance = new ApiApi();
+var channelId = channelId_example; // String | A unique value identifying this channel.
 
 try {
-    final response = api.retrieveChannel(channelId);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.retrieveChannel(channelId);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->retrieveChannel: $e\n');
 }
 ```
@@ -542,13 +542,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this group.
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this group.
 
 try {
-    final response = api.retrieveGroup(id);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.retrieveGroup(id);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->retrieveGroup: $e\n');
 }
 ```
@@ -588,13 +588,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this user.
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this user.
 
 try {
-    final response = api.retrieveUser(id);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.retrieveUser(id);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->retrieveUser: $e\n');
 }
 ```
@@ -634,14 +634,14 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this group.
-final Group group = ; // Group | 
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this group.
+var group = new Group(); // Group | 
 
 try {
-    final response = api.updateGroup(id, group);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.updateGroup(id, group);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->updateGroup: $e\n');
 }
 ```
@@ -682,14 +682,14 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('googleIdentityPlatformAuth').password = 'YOUR_PASSWORD';
 
-final api = MyApi().getApiApi();
-final String id = id_example; // String | A unique integer value identifying this user.
-final User user = ; // User | 
+var api_instance = new ApiApi();
+var id = id_example; // String | A unique integer value identifying this user.
+var user = new User(); // User | 
 
 try {
-    final response = api.updateUser(id, user);
-    print(response);
-} catch on DioError (e) {
+    var result = api_instance.updateUser(id, user);
+    print(result);
+} catch (e) {
     print('Exception when calling ApiApi->updateUser: $e\n');
 }
 ```

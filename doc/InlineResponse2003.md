@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **count** | **int** |  | [optional] 
 **next** | **String** |  | [optional] 
 **previous** | **String** |  | [optional] 
-**results** | [**BuiltList&lt;Follow&gt;**](Follow.md) |  | [optional] 
+**results** | [**BuiltList<Follow>**](Follow.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
