@@ -24,13 +24,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = FollowsApi();
-final page = 56; // int | A page number within the paginated result set.
+final api = MyApi().getFollowsApi();
+final int page = 56; // int | A page number within the paginated result set.
 
 try {
-    final result = api_instance.followsList(page);
-    print(result);
-} catch (e) {
+    final response = api.followsList(page);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling FollowsApi->followsList: $e\n');
 }
 ```

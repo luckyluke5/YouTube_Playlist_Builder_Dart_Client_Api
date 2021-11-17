@@ -25,13 +25,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = ChannelsApi();
-final page = 56; // int | A page number within the paginated result set.
+final api = MyApi().getChannelsApi();
+final int page = 56; // int | A page number within the paginated result set.
 
 try {
-    final result = api_instance.channelsList(page);
-    print(result);
-} catch (e) {
+    final response = api.channelsList(page);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ChannelsApi->channelsList: $e\n');
 }
 ```
@@ -69,13 +69,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = ChannelsApi();
-final channelId = channelId_example; // String | A unique value identifying this channel.
+final api = MyApi().getChannelsApi();
+final String channelId = channelId_example; // String | A unique value identifying this channel.
 
 try {
-    final result = api_instance.channelsRead(channelId);
-    print(result);
-} catch (e) {
+    final response = api.channelsRead(channelId);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling ChannelsApi->channelsRead: $e\n');
 }
 ```

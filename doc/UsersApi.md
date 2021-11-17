@@ -31,13 +31,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = UsersApi();
-final data = User(); // User | 
+final api = MyApi().getUsersApi();
+final User data = ; // User | 
 
 try {
-    final result = api_instance.usersCreate(data);
-    print(result);
-} catch (e) {
+    final response = api.usersCreate(data);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UsersApi->usersCreate: $e\n');
 }
 ```
@@ -77,12 +77,12 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
+final api = MyApi().getUsersApi();
+final int id = 56; // int | A unique integer value identifying this user.
 
 try {
-    api_instance.usersDelete(id);
-} catch (e) {
+    api.usersDelete(id);
+} catch on DioError (e) {
     print('Exception when calling UsersApi->usersDelete: $e\n');
 }
 ```
@@ -122,13 +122,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = UsersApi();
-final page = 56; // int | A page number within the paginated result set.
+final api = MyApi().getUsersApi();
+final int page = 56; // int | A page number within the paginated result set.
 
 try {
-    final result = api_instance.usersList(page);
-    print(result);
-} catch (e) {
+    final response = api.usersList(page);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UsersApi->usersList: $e\n');
 }
 ```
@@ -168,14 +168,14 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
-final data = User(); // User | 
+final api = MyApi().getUsersApi();
+final int id = 56; // int | A unique integer value identifying this user.
+final User data = ; // User | 
 
 try {
-    final result = api_instance.usersPartialUpdate(id, data);
-    print(result);
-} catch (e) {
+    final response = api.usersPartialUpdate(id, data);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UsersApi->usersPartialUpdate: $e\n');
 }
 ```
@@ -216,13 +216,13 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
+final api = MyApi().getUsersApi();
+final int id = 56; // int | A unique integer value identifying this user.
 
 try {
-    final result = api_instance.usersRead(id);
-    print(result);
-} catch (e) {
+    final response = api.usersRead(id);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UsersApi->usersRead: $e\n');
 }
 ```
@@ -262,14 +262,14 @@ import 'package:my_api/api.dart';
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').username = 'YOUR_USERNAME'
 //defaultApiClient.getAuthentication<HttpBasicAuth>('Basic').password = 'YOUR_PASSWORD';
 
-final api_instance = UsersApi();
-final id = 56; // int | A unique integer value identifying this user.
-final data = User(); // User | 
+final api = MyApi().getUsersApi();
+final int id = 56; // int | A unique integer value identifying this user.
+final User data = ; // User | 
 
 try {
-    final result = api_instance.usersUpdate(id, data);
-    print(result);
-} catch (e) {
+    final response = api.usersUpdate(id, data);
+    print(response);
+} catch on DioError (e) {
     print('Exception when calling UsersApi->usersUpdate: $e\n');
 }
 ```
