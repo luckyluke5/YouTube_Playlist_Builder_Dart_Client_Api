@@ -3,6 +3,7 @@ info:
   title: Your Project
   version: 1.0.0
   description: "API for all things \u2026"
+  termsOfService: https://example.com/tos.html
 paths:
   /api/users:
     get:
@@ -481,3 +482,53 @@ components:
       required:
         - user
         - channel
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+      description: basic authentication
+    sessionAuth:
+      type: apiKey
+      in: cookie
+      name: JSESSIONID
+      description: Session authentication
+    oauth-test:
+      type: oauth2
+      description: test OAuth2 service
+      flows:
+        authorizationCode:
+          authorizationUrl: https://oauth-test.cc.columbia.edu/as/authorization.oauth2
+          tokenUrl: https://oauth-test.cc.columbia.edu/as/token.oauth2
+          scopes:
+            auth-columbia: Columbia UNI login
+            create: create
+            read: read
+            update: update
+            delete: delete
+            openid: disclose your identity
+            profile: your user profile
+            email: your email address
+            https://api.columbia.edu/scope/group: groups you are a member of
+            demo-django-jsonapi-training-sla-bronze: 'permitted to access the django-jsonapi-training
+              demo: 1 request per second'
+            demo-django-jsonapi-training-sla-update: permitted to update the django-jsonapi-training
+              resources
+servers:
+  - url: http://localhost:8000
+    description: local dev
+  - url: https://localhost
+    description: local docker
+  - url: https://playlist-builder-308809.appspot.com
+    description: demo
+  - url: '{serverURL}'
+    description: provide your server URL
+    variables:
+      serverURL:
+        default: http://localhost:8000
+security:
+  - basicAuth: []
+  - sessionAuth: []
+  - oauth-test:
+      - - auth-columbia
+        - openid
+        - https://api.columbia.edu/scope/group

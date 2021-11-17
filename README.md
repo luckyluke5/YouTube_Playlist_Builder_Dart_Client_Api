@@ -60,7 +60,7 @@ try {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost:8000*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -95,7 +95,34 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## basicAuth
+
+- **Type**: HTTP basic authentication
+
+## oauth-test
+
+- **Type**: OAuth
+- **Flow**: accessCode
+- **Authorization URL**: https://oauth-test.cc.columbia.edu/as/authorization.oauth2
+- **Scopes**: 
+ - **auth-columbia**: Columbia UNI login
+ - **create**: create
+ - **read**: read
+ - **update**: update
+ - **delete**: delete
+ - **openid**: disclose your identity
+ - **profile**: your user profile
+ - **email**: your email address
+ - **https://api.columbia.edu/scope/group**: groups you are a member of
+ - **demo-django-jsonapi-training-sla-bronze**: permitted to access the django-jsonapi-training demo: 1 request per second
+ - **demo-django-jsonapi-training-sla-update**: permitted to update the django-jsonapi-training resources
+
+## sessionAuth
+
+- **Type**: API key
+- **API key parameter name**: JSESSIONID
+- **Location**: 
 
 
 ## Author

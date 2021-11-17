@@ -5,7 +5,7 @@
 import 'package:my_api/api.dart';
 ```
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost:8000*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -36,6 +36,15 @@ API endpoint that allows groups to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final Group group = ; // Group | 
@@ -60,7 +69,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -79,6 +88,15 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final User user = ; // User | 
@@ -103,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -122,6 +140,15 @@ API endpoint that allows groups to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this group.
@@ -145,7 +172,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -164,6 +191,15 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this user.
@@ -187,7 +223,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -204,6 +240,15 @@ No authorization required
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final int page = 56; // int | A page number within the paginated result set.
@@ -228,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -245,6 +290,15 @@ No authorization required
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final int page = 56; // int | A page number within the paginated result set.
@@ -269,7 +323,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -288,6 +342,15 @@ API endpoint that allows groups to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final int page = 56; // int | A page number within the paginated result set.
@@ -312,7 +375,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -331,6 +394,15 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final int page = 56; // int | A page number within the paginated result set.
@@ -355,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -374,6 +446,15 @@ API endpoint that allows groups to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this group.
@@ -400,7 +481,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -419,6 +500,15 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this user.
@@ -445,7 +535,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -462,6 +552,15 @@ No authorization required
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String channelId = channelId_example; // String | A unique value identifying this channel.
@@ -486,7 +585,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -505,6 +604,15 @@ API endpoint that allows groups to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this group.
@@ -529,7 +637,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -548,6 +656,15 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this user.
@@ -572,7 +689,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -591,6 +708,15 @@ API endpoint that allows groups to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this group.
@@ -617,7 +743,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 
@@ -636,6 +762,15 @@ API endpoint that allows users to be viewed or edited.
 ### Example
 ```dart
 import 'package:my_api/api.dart';
+// TODO Configure HTTP basic authorization: basicAuth
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').username = 'YOUR_USERNAME'
+//defaultApiClient.getAuthentication<HttpBasicAuth>('basicAuth').password = 'YOUR_PASSWORD';
+// TODO Configure OAuth2 access token for authorization: oauth-test
+//defaultApiClient.getAuthentication<OAuth>('oauth-test').accessToken = 'YOUR_ACCESS_TOKEN';
+// TODO Configure API key authorization: sessionAuth
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKey = 'YOUR_API_KEY';
+// uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//defaultApiClient.getAuthentication<ApiKeyAuth>('sessionAuth').apiKeyPrefix = 'Bearer';
 
 final api = MyApi().getApiApi();
 final String id = id_example; // String | A unique integer value identifying this user.
@@ -662,7 +797,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth), [oauth-test](../README.md#oauth-test), [sessionAuth](../README.md#sessionAuth)
 
 ### HTTP request headers
 

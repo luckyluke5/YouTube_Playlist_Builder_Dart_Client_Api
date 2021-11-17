@@ -12,7 +12,7 @@ import 'package:my_api/src/auth/oauth.dart';
 import 'package:my_api/src/api/api_api.dart';
 
 class MyApi {
-  static const String basePath = r'http://localhost';
+  static const String basePath = r'http://localhost:8000';
 
   final Dio dio;
   final Serializers serializers;

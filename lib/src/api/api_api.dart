@@ -54,7 +54,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -147,7 +161,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -240,7 +268,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -287,7 +329,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -334,7 +390,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -413,7 +483,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -492,7 +576,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -571,7 +669,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -652,7 +764,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -747,7 +873,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -840,7 +980,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -914,7 +1068,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -988,7 +1156,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       validateStatus: validateStatus,
@@ -1064,7 +1246,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
@@ -1159,7 +1355,21 @@ class ApiApi {
         ...?headers,
       },
       extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
+        'secure': <Map<String, String>>[
+          {
+            'type': 'http',
+            'scheme': 'basic',
+            'name': 'basicAuth',
+          },{
+            'type': 'oauth2',
+            'name': 'oauth-test',
+          },{
+            'type': 'apiKey',
+            'name': 'sessionAuth',
+            'keyName': 'JSESSIONID',
+            'where': '',
+          },
+        ],
         ...?extra,
       },
       contentType: 'application/json',
